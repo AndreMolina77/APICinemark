@@ -4,7 +4,6 @@ import jswonwebtoken from 'jsonwebtoken';
 import bcryptjs from 'bcryptjs';
 
 import modeloClientes from "../models/Clientes.js";
-import modeloEmpleados from "../models/Empleados.js";
 import { config } from "../config.js";
 
 const registerClienteController = {};

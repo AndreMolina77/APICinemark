@@ -5,7 +5,7 @@ import modeloClientes from "../models/Clientes.js";
 import modeloEmpleados from "../models/Empleados.js";
 
 import { config, } from "../config.js";
-import { sendEmail, HTMLRecoveryEmail } from "../utils/sendEmail.js";
+import { sendEmail, HTMLRecoveryEmail } from "../utils/mailRecoveryPassword.js";
 
 const recoveryPasswordController = {};
 

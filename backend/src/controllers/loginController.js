@@ -63,4 +63,4 @@ loginController.login = async (req, res) => {
   }
 };
 
-export default controladorLogin;
+export default loginController;

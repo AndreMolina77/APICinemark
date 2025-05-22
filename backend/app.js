@@ -1,13 +1,13 @@
 import cookieParser from "cookie-parser";
 import express from "express";
-import clienteRoutes from "./routes/clientes.js";
-import empleadoRoutes from "./routes/empleados.js";
-import loginRoutes from "./routes/login.js";
-import logoutRoutes from "./routes/logout.js";
-import peliculasRoutes from "./routes/peliculas.js";
-import recoveryPasswordRoutes from "./routes/recoveryPassword.js"; 
-import registerClienteRoutes from "./routes/registerCliente.js";
-import registerEmpleadoRoutes from "./routes/registerEmpleado.js";
+import clienteRoutes from "./src/routes/clientes.js";
+import empleadoRoutes from "./src/routes/empleados.js";
+import loginRoutes from "./src/routes/login.js";
+import logoutRoutes from "./src/routes/logout.js";
+import peliculasRoutes from "./src/routes/peliculas.js";
+import recoveryPasswordRoutes from "./src/routes/recoveryPassword.js"; 
+import registerClienteRoutes from "./src/routes/registerCliente.js";
+import registerEmpleadoRoutes from "./src/routes/registerEmpleado.js";
 
 const app = express();
 

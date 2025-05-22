@@ -1,4 +1,4 @@
-import peliculasModel from "../models/Peliculas"
+import peliculasModel from "../models/Peliculas.js"
 import { v2 as cloudinary} from "cloudinary";
 
 import { config } from "../config.js";
@@ -34,7 +34,7 @@ if (req.file) {
     imageURL = result.secure_url
 }
 //Uardar el registoe en la base de datos
-const newPelicula = new peliculasModel({titulo, descripcion, director, genero, anio, duracion, imagen });
+const newPelicula = new peliculasModel({titulo, descripcion, director, genero, anio, duracion, imagen:imageURL });
 newPelicula.save();
 
 res.json({message: "Pelicula guardada"});
@@ -57,8 +57,9 @@ peliculasController.putPeliculas = async (req, res) => {
     await peliculasController.findByIdAndUpdate(req.params.id,
         {titulo, descripcion, director, genero, anio, duracion, imagen: imagenURL}, {new: true}
     );
+    res.json({message: "Pelicula guardada"})
 }
-res.json({message: "Pelicula guardada"})
+
 
 //DELETE
 peliculasController.deletePeliculas = async (req, res) => {
